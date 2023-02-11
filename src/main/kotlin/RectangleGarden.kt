@@ -6,9 +6,8 @@ open class RectangleGarden(var rectangleWide: Double = 0.0, var rectangleHeight:
     init {
         rectangleWide = getValidDoubleInput("Enter the width of the rectangular garden: ")
         rectangleHeight = getValidDoubleInput("Enter the height of the rectangular garden: ")
-        calculateSize()
         numberOfSensors = calculateNumberOfSensors().toDouble()
-
+        calculateSize()
     }
 
     private fun getValidDoubleInput(inputMessage: String): Double {

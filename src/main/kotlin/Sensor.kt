@@ -1,7 +1,5 @@
 // Bodenfeutigkeit  Temperatur  Regensensor
 // TODO Der Sensor gibt den Sprenklern den Befehl wie oft und wieviel gegoßen werden muß. Auch definiert es in welchem Zyklus gegoßen werden muß
-
-
 open class Sensor(
     var soilmoisture: Double = 65.0, val soilmoistureUnit: String = "percent",//soilmoisture ist die eigenschaft und sie bedeutet Bodenfeutigkeit. Die soilmoistureUnit
     var temperature: Int = 12, val temperatureUnit: String = "degree",//ist auch eine Eigenschaft und ist nicht feränderbar, weil sie den wert Prozent als festen bestandteil hat.
@@ -16,12 +14,7 @@ open class Sensor(
         } else if (soilmoisture <= 65.0 && temperature < 12 && rainsensor < 0.8) {
             return "The soil moisture is too low, currently it is not raining right now either and the weather is very warm.\n Your garden will be watered until the standard values are reached."
         } else {
-            return "No playback"
+            return "Your garden currently does not need watering"
         }
-    }
-
-
-    fun waterPlants(duration: Int) {
-        println("Watering the plants for $duration seconds.")
     }
 }
