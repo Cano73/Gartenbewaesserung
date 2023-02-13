@@ -103,7 +103,7 @@ fun main() {
     //println("Watering the plants for $duration seconds.")
     val random = java.util.Random()
     val duration: Int = random.nextInt(10) + 1
-    println("Watering the plants for $duration seconds.")
+    println("Watering the plants for $duration minutes.")
 
 }
 

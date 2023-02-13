@@ -8,7 +8,7 @@ open class Sensor(
 ): WateringActivation(){
     fun randomPlayback(): String {
         if (soilmoisture <= 65.0 && temperature >= 12 && rainsensor >= 0.8) {
-            return "The soil moisture is too low. The system starts in the minimum status."
+            return "The soil moisture is too low. The system starts in the medium status."
         } else if (soilmoisture <= 65.0 && temperature >= 12 && rainsensor < 0.8) {
             return "The soil moisture is too low and there is no rain. The plant starts in the middle status."
         } else if (soilmoisture <= 65.0 && temperature < 12 && rainsensor < 0.8) {
